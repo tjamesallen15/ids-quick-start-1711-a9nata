@@ -1,0 +1,72 @@
+<soho-module-nav-container
+  [ngClass]="{ 'module-nav-container': true, 'is-personalizable': true }"
+>
+  <soho-module-nav
+    [displayMode]="'collapsed'"
+    [ngClass]="{ 'module-nav': true }"
+  >
+    <div class="module-nav-bar">
+      <soho-accordion
+        [allowOnePane]="true"
+        [hasPanels]="true"
+        [moduleNav]="true"
+        [rerouteOnLinkClick]="false"
+        (click)="onModuleNavAccordionClick($event)"
+      >
+        <div class="module-nav-header accordion-section">
+          <soho-module-nav-switcher
+            class="module-nav-switcher"
+            [icon]=""
+            [generate]="false"
+            [roles]="(Roles$ | async)!"
+            [moduleButtonText]="'TEST'"
+            [changeIconOnSelect]="false"
+            [noSearch]="true"
+            (click)="onSwitcherClick()"
+          ></soho-module-nav-switcher>
+        </div>
+
+        <div class="module-nav-search-container accordion-section">
+          <label for="module-nav-searchfield" class="audible">Search</label>
+          <input
+            soho-searchfield
+            id="module-nav-searchfield"
+            name="module-nav-searchfield"
+            placeholder="Search"
+            [ngClass]="{
+              searchfield: true,
+              'module-nav-search': true
+            }"
+          />
+        </div>
+
+        <div class="module-nav-main accordion-section">
+          <!-- A -->
+          <div class="accordion-header">
+            <svg
+              class="settings"
+              focusable="false"
+              aria-hidden="true"
+              role="presentation"
+            >
+              <use href="#icon-settings"></use>
+            </svg>
+            <a href="#"><span>A</span></a>
+          </div>
+          <div class="accordion-pane">
+            <div class="accordion-header">
+              <a><span>About</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-nav-main accordion-section">
+          <!-- A -->
+          <div class="accordion-header">
+            <a href="/B"><span>B</span></a>
+          </div>
+        </div>
+      </soho-accordion>
+    </div>
+  </soho-module-nav>
+</soho-module-nav-container>

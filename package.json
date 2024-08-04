@@ -1,0 +1,39 @@
+{
+  "name": "ids-enterprise-ng-quickstart",
+  "version": "16.7.1",
+  "author": "Infor Design",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.0.6",
+    "@angular/common": "^17.0.6",
+    "@angular/compiler": "^17.0.6",
+    "@angular/core": "^17.0.6",
+    "@angular/forms": "^17.0.6",
+    "@angular/platform-browser": "^17.0.6",
+    "@angular/platform-browser-dynamic": "17.0.6",
+    "@angular/router": "^17.0.6",
+    "ids-enterprise-ng": "15.6.1",
+    "ids-enterprise-typings": "15.6.1",
+    "rxjs": "~7.5.6",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.6",
+    "@angular/cli": "^17.0.6",
+    "@angular/compiler-cli": "^17.0.6",
+    "@angular/language-service": "^17.0.6",
+    "@types/node": "^20.2.5",
+    "codelyzer": "^6.0.2",
+    "ts-node": "~18.11.9",
+    "typescript": "~5.2.2"
+  }
+}
